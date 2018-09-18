@@ -19,4 +19,10 @@ class Mazo {
 		return $this->cant != 0;
 	}
 
+	public function agregar($carta){
+		$this->cartas[] = $carta;
+		$this->cant++;
+		return TRUE;
+	}
+
 }
