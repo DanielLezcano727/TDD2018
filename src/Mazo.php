@@ -12,6 +12,11 @@ class Mazo {
 	}
 
 	public function mezclar() {
-			
+		return TRUE;
   	}
+
+	public function tieneCartas(){
+		return $this->cant != 0;
+	}
+
 }
