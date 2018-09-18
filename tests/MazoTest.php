@@ -19,5 +19,10 @@ class MazoTest extends TestCase {
         $this->assertTrue($mazo->mezclar());
     }
 
+	public function testEsVacio() {
+		$mazo = new Mazo;
+		$this->assertFalse($mazo->tieneCartas());
+	}
+
 
 }
