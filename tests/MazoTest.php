@@ -26,12 +26,12 @@ class MazoTest extends TestCase {
 
 	public function testAgregar() {
 		$mazo = new Mazo;
-		$this->assertTrue($mazo->agregar(2);
-		$this->assertTrue($mazo->agregar(3);
-		$this->assertTrue($mazo->agregar(8);
-		$this->assertTrue($mazo->agregar(7);
-		$this->assertTrue($mazo->agregar(9);
-		$this->assertTrue($mazo->agregar(1);
+		$this->assertTrue($mazo->agregar(2));
+		$this->assertTrue($mazo->agregar(3));
+		$this->assertTrue($mazo->agregar(8));
+		$this->assertTrue($mazo->agregar(7));
+		$this->assertTrue($mazo->agregar(9));
+		$this->assertTrue($mazo->agregar(1));
 	}
 
 
