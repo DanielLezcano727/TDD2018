@@ -25,4 +25,8 @@ class Mazo {
 		return true;
 	}
 
+	public function obtenerCantidad(){
+		return $this->cant;
+	}
+
 }
