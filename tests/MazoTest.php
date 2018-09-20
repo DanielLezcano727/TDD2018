@@ -52,4 +52,21 @@ class MazoTest extends TestCase {
 		
 	}
 
+	public function testObtenerCarta(){
+		$mazo = new Mazo();
+		$this->assertFalse($mazo->obtenerCarta());
+		$mazo->agregar(2);
+		$mazo->agregar(4);
+		$mazo->agregar(6);
+		$mazo->agregar(3);
+		$mazo->agregar(5);
+		$mazo->agregar(12);
+		$this->assertEquals($mazo->obtenerCarta(),2);
+		$this->assertEquals($mazo->obtenerCarta(),4);
+		$this->assertEquals($mazo->obtenerCarta(),6);
+		$this->assertEquals($mazo->obtenerCarta(),3);
+		$this->assertEquals($mazo->obtenerCarta(),5);
+		$this->assertEquals($mazo->obtenerCarta(),12);
+	}
+
 }
