@@ -33,4 +33,9 @@ class Mazo {
 		return array_pop($this->cartas);
 	}
 
+	public function cortar($cant){
+		for($i = 0; $i<$cant;$i++){
+			$this->agregar($this->obtenerCarta());
+		}
+	}
 }

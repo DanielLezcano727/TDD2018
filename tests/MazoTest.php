@@ -75,7 +75,7 @@ class MazoTest extends TestCase {
 		foreach(array(1,2,3,4,5,6,7,8,9) as $x){
 			$mazo->agregar($x);
 		}
-		$this->assertTrue($mazo->cortar(5));
+		$mazo->cortar(5);
 		foreach(array(6,7,8,9,1,2,3,4,5) as $x){
 			$this->assertEquals($mazo->obtenerCarta(),$x);
 		}
