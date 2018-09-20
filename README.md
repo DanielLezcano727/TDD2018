@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/DanielLezcano727/TDD2018.svg?branch=master)](https://travis-ci.org/DanielLezcano727/TDD2018)
 
+Lezcano Daniel - Siles Micaela
+
 # Consigna
 
 - Utilizando TDD.
