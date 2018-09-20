@@ -20,13 +20,17 @@ class Mazo {
 	}
 
 	public function agregar($carta){
-		$this->cartas[] = $carta;
+		array_unshift($this->cartas, $carta);
 		$this->cant++;
 		return true;
 	}
 
 	public function obtenerCantidad(){
 		return $this->cant;
+	}
+
+	public function obtenerCarta(){
+		return array_pop($this->cartas);
 	}
 
 }
