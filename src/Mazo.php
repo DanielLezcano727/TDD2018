@@ -12,7 +12,7 @@ class Mazo {
 	}
 
 	public function mezclar() {
-		return TRUE;
+		return true;
   	}
 
 	public function tieneCartas(){
@@ -22,7 +22,7 @@ class Mazo {
 	public function agregar($carta){
 		$this->cartas[] = $carta;
 		$this->cant++;
-		return TRUE;
+		return true;
 	}
 
 }

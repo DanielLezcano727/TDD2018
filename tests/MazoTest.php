@@ -34,5 +34,22 @@ class MazoTest extends TestCase {
 		$this->assertTrue($mazo->agregar(1));
 	}
 
+	public function testCantidad() {
+		$mazo = new Mazo;
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$this->assertEquals($mazo->obtenerCantidad(),8);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$mazo->agregar(2);
+		$this->assertEquals($mazo->obtenerCantidad(),11);
+		
+	}
 
 }
