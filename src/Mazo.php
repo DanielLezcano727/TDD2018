@@ -11,9 +11,9 @@ class Mazo {
 		$this->cartas = array();
 		$this->cant = 0;
 		if($tipo == "españolas"){
-			$poker = false;
+			$this->poker = false;
 		}else{
-			$poker = true;
+			$this->poker = true;
 		}
 	}
 

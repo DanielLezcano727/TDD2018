@@ -68,11 +68,12 @@ class MazoTest extends TestCase {
 		$mazo->agregar(4, "Treboles");
 		$mazo->agregar("K", "Corazones");
 		$mazo->agregar("Q", "Diamantes");
+		$mazo->agregar("Hola", "Que Tal");
 		$this->assertEquals($mazo->obtenerCarta()->leer(),"As de Picas");
 		$this->assertEquals($mazo->obtenerCarta()->leer(),"4 de Treboles");
 		$this->assertEquals($mazo->obtenerCarta()->leer(),"K de Corazones");
 		$this->assertEquals($mazo->obtenerCarta()->leer(),"Q de Diamantes");
-		
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"As de Picas");		
 	}
 
 	public function testCortar(){
