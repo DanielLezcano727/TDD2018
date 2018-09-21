@@ -14,11 +14,6 @@ class MazoTest extends TestCase {
         $this->assertTrue(isset($mazo));
     }
 
-    public function testMezclable() {
-        $mazo = new Mazo;
-        $this->assertTrue($mazo->mezclar());
-    }
-
 	public function testEsVacio() {
 		$mazo = new Mazo;
 		$this->assertFalse($mazo->tieneCartas());
@@ -79,6 +74,21 @@ class MazoTest extends TestCase {
 		foreach(array(6,7,8,9,1,2,3,4,5) as $x){
 			$this->assertEquals($mazo->obtenerCarta(),$x);
 		}
+	}
+
+	public function testMezclar(){
+		$mazo = new Mazo();
+		foreach(array(1,2,3,4,5,6,7,8,9) as $x){
+			$mazo->agregar($x);
+		}
+		$this->assertTrue($mazo->mezclar());
+		$auxBool = true;
+		foreach(array(1,2,3,4,5,6,7,8,9) as $x){
+			if($x != $mazo->obtenerCarta()){
+				$auxBool = false;
+			}
+		}
+		$this->assertFalse($auxBool);
 	}
 
 }
