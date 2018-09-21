@@ -25,6 +25,28 @@ class Carta {
             break;
         }
         
+        if($numero <= 12 && $numero > 0){
+            $this->numero = $numero;
+        }else{
+            switch(strtolower($numero)){
+            case "as":
+            case "k":
+            case "q":
+            case "j":
+                $this->numero = $numero;
+                break;
+            default:
+                $this->numero = 2;
+            }
+        }
+    }
+
+    public function verPalo(){
+        return $this->palo;
+    }
+
+    public function verNumero(){
+        return $this->numero;
     }
 
 }
