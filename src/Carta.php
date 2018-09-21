@@ -49,4 +49,8 @@ class Carta {
         return $this->numero;
     }
 
+    public function leer(){
+        return $this->verNumero() . " de " . $this->verPalo();
+    }
+
 }

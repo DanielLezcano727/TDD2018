@@ -25,8 +25,8 @@ class MazoTest extends TestCase {
 		$this->assertTrue($mazo->agregar(3, "Basto"));
 		$this->assertTrue($mazo->agregar(8, "Espada"));
 		$this->assertTrue($mazo->agregar(7, "Oro"));
-		$this->assertFalse($mazo->agregar(9, "Picas"));
-		$this->assertFalse($mazo->agregar(1, "Corazones"));
+		$this->assertTrue($mazo->agregar(9, "Picas"));
+		$this->assertTrue($mazo->agregar(1, "Corazones"));
 	}
 
 	public function testCantidad() {
@@ -56,22 +56,22 @@ class MazoTest extends TestCase {
 		$mazo->agregar(3, "Oro");
 		$mazo->agregar(5, "Oro");
 		$mazo->agregar(12, "Espada");
-		$this->assertEquals($mazo->obtenerCarta(),"2 de Copa");
-		$this->assertEquals($mazo->obtenerCarta(),"4 de Basto");
-		$this->assertEquals($mazo->obtenerCarta(),"6 de Espada");
-		$this->assertEquals($mazo->obtenerCarta(),"3 de Oro");
-		$this->assertEquals($mazo->obtenerCarta(),"5 de Oro");
-		$this->assertEquals($mazo->obtenerCarta(),"12 de Espada");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"2 de Copa");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"4 de Basto");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"6 de Espada");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"3 de Oro");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"5 de Oro");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"12 de Espada");
 		$this->assertNull($mazo->obtenerCarta());
 		$mazo = new Mazo("poker");
 		$mazo->agregar("As", "Picas");
 		$mazo->agregar(4, "Treboles");
 		$mazo->agregar("K", "Corazones");
 		$mazo->agregar("Q", "Diamantes");
-		$this->assertEquals($mazo->obtenerCarta(),"As de Picas");
-		$this->assertEquals($mazo->obtenerCarta(),"4 de Treboles");
-		$this->assertEquals($mazo->obtenerCarta(),"K de Corazones");
-		$this->assertEquals($mazo->obtenerCarta(),"Q de Diamantes");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"As de Picas");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"4 de Treboles");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"K de Corazones");
+		$this->assertEquals($mazo->obtenerCarta()->leer(),"Q de Diamantes");
 		
 	}
 
