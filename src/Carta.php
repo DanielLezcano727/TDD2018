@@ -15,9 +15,9 @@ class Carta {
      * @param string $palo
      */
 
-    public function __construct($numero, $palo){
+    public function __construct($numero, $palo) {
 
-        switch(strtolower($palo)){
+        switch (strtolower($palo)) {
             case "copa":
             case "basto":
             case "espada":
@@ -33,10 +33,10 @@ class Carta {
                 break;
         }
 
-        if($numero <= 12 && $numero > 0){
+        if ($numero <= 12 && $numero > 0) {
             $this->numero = $numero;
-        }else{
-            switch(strtolower($numero)){
+        }else {
+            switch (strtolower($numero)) {
                 case "as":
                 case "k":
                 case "q":
@@ -55,7 +55,7 @@ class Carta {
      * @return string
      */
 
-    public function verPalo(){
+    public function verPalo() {
         return $this->palo;
     }
 
@@ -65,7 +65,7 @@ class Carta {
      * @ return int or string
      */
 
-    public function verNumero(){
+    public function verNumero() {
           return $this->numero;
     }
 
@@ -75,7 +75,7 @@ class Carta {
      * @return string
      */
 
-    public function leer(){
+    public function leer() {
         return $this->verNumero() . " de " . $this->verPalo();
     }
 
