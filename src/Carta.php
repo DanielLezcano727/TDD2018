@@ -16,37 +16,51 @@ class Carta {
    */
   public function __construct($numero, $palo) {
 
-    switch (strtolower($palo)) {
+    if($this->paloValidoEspanolas($palo) || $this->paloValidoPoker($palo)){
+      $this->palo = $palo;
+    }
+    else{
+      $this->palo = "Copa";
+    }
+
+    if ($numero <= 12 && $numero > 0 || $this->numeroValido($numero)) {
+      $this->numero = $numero;
+    }
+    else {
+      $this->numero = 2;
+    }
+  }
+  
+  public function paloValidoEspanolas($palo){
+    switch(strtolower($palo)){
       case "copa":
       case "basto":
       case "espada":
       case "oro":
+        return TRUE;
+    }
+    return FALSE;
+  }
+
+  public function paloValidoPoker($palo){
+    switch (strtolower($palo)) {
       case "picas":
       case "corazones":
       case "diamantes":
       case "treboles":
-        $this->palo = $palo;
-        break;
-      default:
-        $this->palo = "Copa";
-        break;
+        return TRUE;
     }
+  }
 
-    if ($numero <= 12 && $numero > 0) {
-      $this->numero = $numero;
+  public function numeroValido($numero){
+    switch (strtolower($numero)) {
+      case "as":
+      case "k":
+      case "q":
+      case "j":
+        return TRUE;
     }
-    else {
-      switch (strtolower($numero)) {
-        case "as":
-        case "k":
-        case "q":
-        case "j":
-          $this->numero = $numero;
-          break;
-        default:
-          $this->numero = 2;
-      }
-    }
+    return FALSE;
   }
 
   /**
