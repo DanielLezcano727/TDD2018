@@ -31,6 +31,15 @@ class Carta {
     }
   }
   
+  /**
+   * paloValidoEspanolas: Devuelve true si el palo es un palo de las cartas españolas y false
+   *   en caso contrario
+   * 
+   * @param string $palo
+   *    Palo de la carta que se quiere crear
+   * 
+   * @return bool
+   */
   public function paloValidoEspanolas($palo){
     switch(strtolower($palo)){
       case "copa":
@@ -42,6 +51,15 @@ class Carta {
     return FALSE;
   }
 
+  /**
+   * paloValidoPoker: Devuelve true si el palo es un palo de las cartas de poker y false
+   *   en caso contrario
+   * 
+   * @param string $palo
+   *    Palo de la carta que se quiere crear
+   * 
+   * @return bool
+   */
   public function paloValidoPoker($palo){
     switch (strtolower($palo)) {
       case "picas":
@@ -52,6 +70,15 @@ class Carta {
     }
   }
 
+  /**
+   * numeroValido: Devuelve true si el numero pertenece a las cartasd de poker y false
+   *   en caso contrario
+   * 
+   * @param string $numero
+   *    Numero de la carta que se quiere crear
+   * 
+   * @return bool
+   */
   public function numeroValido($numero){
     switch (strtolower($numero)) {
       case "as":
